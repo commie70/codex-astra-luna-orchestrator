@@ -1,6 +1,6 @@
 # Plus Plan
 
-Choose this profile for a Luna root at `max` reasoning and Luna execution
+Choose this profile for a Luna root at `xhigh` reasoning and Luna execution
 subagents at `medium` reasoning, with an Astra reviewer at `low`.
 
 The installers (`setup.sh`, `setup.ps1`) ask which profile to install and use this
@@ -16,7 +16,7 @@ For a global setup, merge `profiles/plus/codex/config.toml` into:
 ```toml
 # Root
 model = "gpt-6-luna"
-model_reasoning_effort = "max"
+model_reasoning_effort = "xhigh"
 
 [agents]
 enabled = true

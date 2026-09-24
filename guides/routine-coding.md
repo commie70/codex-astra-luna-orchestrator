@@ -4,7 +4,7 @@ Choose this preset for predictable, routine coding tasks where lower cost and
 faster orchestration are preferred.
 
 This is an optional root override for the [Plus profile](plus-plan.md),
-lowering its Luna root from `max` to `medium`. The installed Luna subagents
+lowering its Luna root from `xhigh` to `medium`. The installed Luna subagents
 remain at `medium` and the Astra reviewer at `low`. If you adopt this override,
 update the installed skill's root-reasoning wording to match.
 

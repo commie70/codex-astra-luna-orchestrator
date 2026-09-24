@@ -71,7 +71,7 @@ If you want numbers that are comparable across configurations:
 4. Repeat each cell two or three times. Variance between runs of the same
    prompt is large enough that a single sample misleads.
 5. Record the profile and any overrides: Pro uses Astra `medium` with Luna
-   `max`; Plus uses Luna `max` with Luna `medium`. Both use an Astra `low`
+   `xhigh`; Plus uses Luna `xhigh` with Luna `medium`. Both use an Astra `low`
    reviewer. Note the Codex version. Caching behaviour and subagent context handling
    change between releases.
 
@@ -157,7 +157,7 @@ In rough order of impact:
   ```toml
   # Root
   model = "gpt-6-luna"
-  model_reasoning_effort = "max"
+  model_reasoning_effort = "xhigh"
   ```
 
 - Do not orchestrate small tasks. The skill's delegation gate already says

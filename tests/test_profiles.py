@@ -8,15 +8,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILES = {
-    "GPT6-SolMax-LunaMax": "max",
+    "GPT6-SolMax-LunaMax": "xhigh",
     "GPT6-SolMedium-LunaMax": "medium",
 }
 LUNA_ROLES = ("explorer", "researcher", "tester", "worker")
 PREVIOUS_PROFILES = {
-    "pro": ("gpt-6-astra", "medium", "max", 4),
-    "plus": ("gpt-6-luna", "max", "medium", 4),
-    "pro-max-2-subagents": ("gpt-6-astra", "medium", "max", 2),
-    "plus-max-2-subagents": ("gpt-6-luna", "max", "medium", 2),
+    "pro": ("gpt-6-astra", "medium", "xhigh", 4),
+    "plus": ("gpt-6-luna", "xhigh", "medium", 4),
+    "pro-max-2-subagents": ("gpt-6-astra", "medium", "xhigh", 2),
+    "plus-max-2-subagents": ("gpt-6-luna", "xhigh", "medium", 2),
 }
 
 
@@ -31,7 +31,7 @@ class SolProfileTests(unittest.TestCase):
                 self.assertEqual(config["sandbox_mode"], "workspace-write")
                 self.assertTrue(config["agents"]["enabled"])
                 self.assertEqual(config["agents"]["default_subagent_model"], "gpt-6-luna")
-                self.assertEqual(config["agents"]["default_subagent_reasoning_effort"], "max")
+                self.assertEqual(config["agents"]["default_subagent_reasoning_effort"], "xhigh")
                 self.assertEqual(config["agents"]["max_concurrent_threads_per_session"], 4)
                 for role in LUNA_ROLES:
                     agent = tomllib.loads(
@@ -39,7 +39,7 @@ class SolProfileTests(unittest.TestCase):
                     )
                     self.assertEqual(agent["name"], role)
                     self.assertEqual(agent["model"], "gpt-6-luna")
-                    self.assertEqual(agent["model_reasoning_effort"], "max")
+                    self.assertEqual(agent["model_reasoning_effort"], "xhigh")
                     expected_mode = "workspace-write" if role in ("worker", "tester") else "read-only"
                     self.assertEqual(agent["sandbox_mode"], expected_mode)
                 reviewer = tomllib.loads(
@@ -53,7 +53,7 @@ class SolProfileTests(unittest.TestCase):
                 ).read_text()
                 self.assertIn(f"root: `gpt-6-sol` at `{effort}` reasoning", skill)
                 self.assertIn(
-                    "explorer, worker, tester, researcher: `gpt-6-luna` at `max` reasoning",
+                    "explorer, worker, tester, researcher: `gpt-6-luna` at `xhigh` reasoning",
                     skill,
                 )
 

@@ -1,6 +1,6 @@
 ---
 name: astra-orchestrator
-description: Orchestrate complex Codex coding work for the Plus profile with GPT-6 Luna at max reasoning as planner/integrator, Luna subagents for exploration, implementation, testing, and research, and an Astra reviewer. Use for multi-file features, debugging across components, repo-wide changes, parallelizable workstreams, or whenever the user asks to delegate or use subagents. Do not use for trivial one-file edits or simple questions.
+description: Orchestrate complex Codex coding work for the Plus profile with GPT-6 Luna at xhigh reasoning as planner/integrator, Luna subagents for exploration, implementation, testing, and research, and an Astra reviewer. Use for multi-file features, debugging across components, repo-wide changes, parallelizable workstreams, or whenever the user asks to delegate or use subagents. Do not use for trivial one-file edits or simple questions.
 ---
 
 # Astra Orchestrator — Plus Profile
@@ -15,7 +15,7 @@ Delegate bounded execution work to specialized subagents, then have the root int
 
 The expected default topology is:
 
-- root: GPT-6 Luna at max reasoning
+- root: GPT-6 Luna at xhigh reasoning
 - explorer: GPT-6 Luna at medium reasoning
 - worker: GPT-6 Luna at medium reasoning
 - tester: GPT-6 Luna at medium reasoning
@@ -103,7 +103,7 @@ When spawning agents, use these models by default:
 - researcher: `gpt-6-luna` at `medium` reasoning
 - reviewer: `gpt-6-astra` at `low` reasoning
 
-The root keeps the Plus profile configuration from `.codex/config.toml`: GPT-6 Luna at max reasoning. The role files in `.codex/agents/` explicitly set Luna reasoning to `medium` and reviewer reasoning to `low`. Preserve those efforts when spawning agents unless the user requests a change. Do not change the root model from within a session.
+The root keeps the Plus profile configuration from `.codex/config.toml`: GPT-6 Luna at xhigh reasoning. The role files in `.codex/agents/` explicitly set Luna reasoning to `medium` and reviewer reasoning to `low`. Preserve those efforts when spawning agents unless the user requests a change. Do not change the root model from within a session.
 
 For every delegated task:
 

@@ -4,7 +4,7 @@ Choose this preset for architecture changes, difficult debugging, and work
 where higher-confidence reasoning matters more than latency.
 
 This is an optional root override for the [Pro profile](full-orchestration.md),
-whose default is Astra `medium`. It leaves the installed Luna `max` roles
+whose default is Astra `medium`. It leaves the installed Luna `xhigh` roles
 and Astra `low` reviewer in place. If you adopt this override, update the
 installed skill's root-reasoning wording to match.
 

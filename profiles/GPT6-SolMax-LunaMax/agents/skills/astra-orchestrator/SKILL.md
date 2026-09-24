@@ -1,6 +1,6 @@
 ---
 name: astra-orchestrator
-description: Orchestrate complex Codex coding work with GPT-6 Sol at max reasoning as planner/integrator and reviewer and GPT-6 Luna at max reasoning for exploration, implementation, testing, and research. Use for multi-file features, debugging across components, repo-wide changes, parallelizable workstreams, or when the user asks to delegate. Do not use for trivial edits or simple questions.
+description: Orchestrate complex Codex coding work with GPT-6 Sol at xhigh reasoning as planner/integrator and reviewer and GPT-6 Luna at xhigh reasoning for exploration, implementation, testing, and research. Use for multi-file features, debugging across components, repo-wide changes, parallelizable workstreams, or when the user asks to delegate. Do not use for trivial edits or simple questions.
 ---
 
 # Orchestrator — GPT-6 Sol Max + GPT-6 Luna Max
@@ -9,9 +9,9 @@ The user's explicit instructions take precedence over this skill.
 
 ## Topology
 
-- root: `gpt-6-sol` at `max` reasoning
-- explorer, worker, tester, researcher: `gpt-6-luna` at `max` reasoning
-- reviewer: `gpt-6-sol` at `max` reasoning, in an independent read-only context
+- root: `gpt-6-sol` at `xhigh` reasoning
+- explorer, worker, tester, researcher: `gpt-6-luna` at `xhigh` reasoning
+- reviewer: `gpt-6-sol` at `xhigh` reasoning, in an independent read-only context
 
 The role files in `.codex/agents/` pin these models and reasoning levels; generic subagents inherit the Luna defaults in `.codex/config.toml`. Do not change the root model from within a session.
 

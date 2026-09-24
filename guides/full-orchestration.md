@@ -11,10 +11,10 @@ The topology is:
 
 ```text
 Astra root (medium)
-├── Luna explorer (max)
-├── Luna worker (max)
-├── Luna tester (max)
-├── Luna researcher (max)
+├── Luna explorer (xhigh)
+├── Luna worker (xhigh)
+├── Luna tester (xhigh)
+├── Luna researcher (xhigh)
 └── Astra reviewer (low)
 ```
 
@@ -29,7 +29,7 @@ model_reasoning_effort = "medium"
 enabled = true
 max_concurrent_threads_per_session = 4
 default_subagent_model = "gpt-6-luna"
-default_subagent_reasoning_effort = "max"
+default_subagent_reasoning_effort = "xhigh"
 ```
 
 For the named roles, use these model settings in the corresponding files under
@@ -38,7 +38,7 @@ For the named roles, use these model settings in the corresponding files under
 ```toml
 # explorer.toml, worker.toml, tester.toml, researcher.toml
 model = "gpt-6-luna"
-model_reasoning_effort = "max"
+model_reasoning_effort = "xhigh"
 ```
 
 ```toml
